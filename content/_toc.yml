@@ -1,0 +1,33 @@
+root: _index
+entries:
+- file: roadmap
+- file: about/_index
+  entries:
+  - file: about/governance
+- file: community/_index
+  entries:
+  - file: community/community-meetings
+  - file: community/community-outreach
+  - file: community/onboarding
+  - file: community/project-management
+  - file: community/role
+  - file: community/skills
+- file: contributors/_index
+  entries:
+  - file: contributors/choosing-a-project
+  - file: contributors/first-contribution
+  - file: contributors/getting-started
+  - file: contributors/ways-to-contribute
+  - file: contributors/why-contribute
+  - file: contributors/setup/ecosystem
+    entries:
+    - file: contributors/setup/install
+    - file: contributors/setup/next-steps
+- file: documentation/_index
+  entries:
+  - file: documentation/accessible-documentation
+- file: maintainers/_index
+  entries:
+  - file: maintainers/interacting-with-new-contributors
+  - file: maintainers/managing-conflict
+  - file: maintainers/meeting_types

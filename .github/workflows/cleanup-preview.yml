@@ -1,0 +1,25 @@
+name: Cleanup Preview
+
+on:
+  pull_request:
+    types: [closed]
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+
+      - name: Remove preview directory
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          rm -rf learn-sp/preview/${{ github.head_ref }}
+          git add .
+          git commit -m "Remove preview for ${{ github.head_ref }}" || echo "Nothing to remove"
+          git push

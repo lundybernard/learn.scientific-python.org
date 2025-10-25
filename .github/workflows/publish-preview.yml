@@ -26,23 +26,23 @@ jobs:
         run: |
           jupyter-book build content/
       
-      - name: Get PR number
-        id: pr-info
-        run: |
-          echo "number=pr-${{ github.event.pull_request.number }}" >> $GITHUB_OUTPUT
-
       - name: Deploy with ghp-import
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Fetch gh-pages branch to preserve existing content
+          git fetch origin gh-pages:gh-pages
+         
           ghp-import \
             --no-jekyll \
+            --no-history \
             --push \
             --force \
-            --message "Deploy preview for ${{ steps.pr-info.outputs.number}}" \
+            --message "Deploy preview for ${{github.event.pull_request.number}}" \
             --branch gh-pages \
             --remote origin \
-            --prefix=preview/pr-${{ steps.pr-info.outputs.number}} \
+            --prefix=preview/pr-${{github.event.pull_request.number}} \
             content/_build/html
 
       - name: Comment PR with preview link
@@ -53,5 +53,5 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: 'Preview deployed to: https://${{ github.repository_owner }}.github.io/learn.scientific-python.org/preview/${{ steps.pr-info.outputs.number }}/'
+              body: 'Preview deployed to: https://${{ github.repository_owner }}.github.io/learn.scientific-python.org/preview/pr-${{github.event.pull_request.number}}/'
             })

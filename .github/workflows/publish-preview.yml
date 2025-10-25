@@ -1,0 +1,44 @@
+name: Deploy Preview
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.14'
+      
+      - name: Install dependencies
+        run: |
+          pip install \
+          jupyter-book \
+          ghp-import
+      
+      - name: Build the book
+        run: |
+          jupyter-book build content/
+      
+      - name: Get branch name
+        id: branch-name
+        run: echo "branch=${GITHUB_REF#refs/heads/}" >> $GITHUB_OUTPUT
+
+      - name: Deploy with ghp-import
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          ghp-import \
+            --no-jekyll \
+            --push \
+            --force \
+            --message "Deploy preview for ${{ steps.branch-name.outputs.branch }}" \
+            --branch gh-pages \
+            --remote origin \
+            --prefix=learn-sp/preview/${{ steps.branch-name.outputs.branch }} \
+            content/_build/html

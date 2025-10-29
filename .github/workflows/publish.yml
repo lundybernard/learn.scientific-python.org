@@ -1,0 +1,44 @@
+name: Deploy Main Site
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.14'
+
+      - name: Install dependencies
+        run: pip install jupyter-book ghp-import
+
+      - name: Build the book
+        run: jupyter-book build content/
+
+      - name: Deploy to gh-pages root
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Fetch gh-pages branch to avoid conflicts
+          git fetch origin gh-pages:gh-pages
+                    
+          ghp-import \
+            --no-jekyll \
+            --push \
+            --message "Deploy main site from main branch" \
+            --branch gh-pages \
+            --remote origin \
+            content/_build/html

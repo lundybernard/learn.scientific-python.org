@@ -1,0 +1,733 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Covered in this guide &#8212; My Jupyter Book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'documentation/accessible-documentation';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="../maintainers/_index.html" />
+    <link rel="prev" title="Documentation Authoring" href="_index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../_index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">My Jupyter Book</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../_index.html">
+                    <no title>
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../about/_index.html">Community</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../community/community-meetings.html">How to initiate a community meeting?</a></li>
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../community/community-outreach.html">Outreaching to Social Media</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../community/project-management.html">Project management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../community/role.html">Who’s a community manager?</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../contributors/_index.html">First steps</a></li>
+
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="_index.html">Documentation Authoring</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Covered in this guide</a></li>
+
+
+
+
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../maintainers/interacting-with-new-contributors.html">Be welcoming</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../maintainers/managing-conflict.html">Code of Conduct</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../maintainers/meeting_types.html">Community Meeting</a></li>
+
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/documentation/accessible-documentation.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Covered in this guide</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Covered in this guide</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sources">Sources</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-accessible-documentation">What is accessible documentation?</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#know-your-strengths">Know your strengths</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#recommendations-by-type">Recommendations by type</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation-structure">Documentation structure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#text">Text</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#images">Images</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#for-things-documentation-authors-don-t-make">For things documentation authors don’t make</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#checklist">Checklist</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#further-resources">Further resources</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="covered-in-this-guide">
+<h1>Covered in this guide<a class="headerlink" href="#covered-in-this-guide" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p>What accessible documentation means</p></li>
+<li><p>What work documentation authors have control over and responsibility for</p></li>
+<li><p>Recommendations for accessible documentation structure, text, images, and videos</p></li>
+<li><p>What areas documentation authors can advocate for or select for accessibility in others’ work</p></li>
+<li><p>A checklist for quick documentation accessibility review</p></li>
+<li><p>External resources related to these topics</p></li>
+</ul>
+</section>
+<section id="sources">
+<h1>Sources<a class="headerlink" href="#sources" title="Link to this heading">#</a></h1>
+<p>This guide was written based on</p>
+<ul class="simple">
+<li><p>The <a class="reference external" href="https://www.w3.org/TR/WCAG22/">Web Content Accessibility Guidelines (WCAG)</a> principles</p></li>
+<li><p><a class="reference external" href="https://github.com/Iota-School/notebooks-for-all/tree/main/user-tests#test-1-navigation">Accessibility user research with Space Telescope Science Institute</a> and <a class="reference external" href="https://github.com/jupyter/surveys/tree/master/surveys/2023-05-jupyterlab-accessibility#readme">Project Jupyter</a></p></li>
+<li><p>Documentation workshops in the Scientific Python project ecosystem</p></li>
+<li><p>Experience doing accessibility work on open source projects.</p></li>
+</ul>
+<p>It was written by Isabela Presedo-Floyd at Quansight Labs.</p>
+</section>
+<section id="what-is-accessible-documentation">
+<h1>What is accessible documentation?<a class="headerlink" href="#what-is-accessible-documentation" title="Link to this heading">#</a></h1>
+<p>If you’ve made it to this guide in the first place, <a class="reference external" href="https://en.wikipedia.org/wiki/Web_accessibility">accessibility</a> may be familiar to you already. Ultimately, the goal is to build an equitable world for disabled and able people; for documentation, this starts by making sure that disabled people can benefit from your documentation the same ways that abled people can whether they are blind or visually impaired, have limited mobility, are deaf or hard of hearing, or have mental disabilities.</p>
+<p>This is a wide net to cast. Not only is there a breadth of experience and acommodations needed for all disabilities, the things that help one disabled person are often the exact things that would be impossible to use for another. So how in the world is accessible documentation even possible?</p>
+<p>When in doubt:</p>
+<ul class="simple">
+<li><p><strong>Write it out.</strong> Text is one of the most flexible and adaptable methods of communication digitally. It can be read visually, audibly, haptically, and be translated to other forms with the right technology. (Note, this does not apply to images of text.)</p></li>
+<li><p><strong>Provide multiple options.</strong> Instead of having <em>only</em> text or <em>only</em> images to explain a concept, have both. This allows people to engage as they need, it provides multiple paths instead of a single path that can become a wall depending on someone’s ability.</p></li>
+<li><p><strong>Use things as they are intended.</strong> For example, if you are writing documentation in plain HTML, use HTML elements as they are intended (often called <a class="reference external" href="https://developer.mozilla.org/en-US/curriculum/core/semantic-html/">semantic HTML</a>); use <code class="docutils literal notranslate"><span class="pre">&lt;button&gt;</span></code> for buttons, not links (<code class="docutils literal notranslate"><span class="pre">&lt;a&gt;</span></code>). This means that the accessibility support built into the structure you are working with can be leveraged, and there is much more accessibility support for many major structures than you may expect.</p></li>
+<li><p><strong>Listen to feedback.</strong> Each person can only know so much and the people using your documentation can provide great insight. Listening to feedback is not the same as immediately making changes as soon as they are requested, do examine the impact of options as best you can.</p></li>
+</ul>
+</section>
+<section id="know-your-strengths">
+<h1>Know your strengths<a class="headerlink" href="#know-your-strengths" title="Link to this heading">#</a></h1>
+<p>As a documentation author, it’s important to understand what is in your control and how you can make the most of it. This guide addresses only what is in control of documentation authors.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Authors make</p></th>
+<th class="head"><p>Authors don’t make</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>✅ Documentation text</p></td>
+<td><p>❌ Website theme</p></td>
+</tr>
+<tr class="row-odd"><td><p>✅ Images</p></td>
+<td><p>❌ The software being documented</p></td>
+</tr>
+<tr class="row-even"><td><p>✅ Videos</p></td>
+<td><p>❌ Website dependencies</p></td>
+</tr>
+<tr class="row-odd"><td><p>✅ Demos of other kinds</p></td>
+<td><p>❌ The software used to access documentation</p></td>
+</tr>
+<tr class="row-even"><td><p>✅ Resource files for downloading</p></td>
+<td><p>❌ External links</p></td>
+</tr>
+<tr class="row-odd"><td><p>✅ Community support events</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Note: Lots of people who write documentation do a lot of other things for the project as well. Because this guide cannot cover all possible accessibility efforts related to documentation at once, it only covers tasks related to this definition of documentation author.</p>
+<p>The things authors can control are the things it is important to take responsibility for. The things authors cannot control are worthy targets for advocating that those who can change them make those changes with accessibility considerations.</p>
+</section>
+<section id="recommendations-by-type">
+<h1>Recommendations by type<a class="headerlink" href="#recommendations-by-type" title="Link to this heading">#</a></h1>
+<section id="documentation-structure">
+<h2>Documentation structure<a class="headerlink" href="#documentation-structure" title="Link to this heading">#</a></h2>
+<p>Orienting oneself in the documentation is key to getting questions answered, discovering what options are available, or just plain knowing where to go next. Without intentional structure, any task on a documentation site gains extra obstacles.</p>
+<p>The most important parts of documentation structure are to be consistent and to use the structural elements you have available to you as intended. Even if there are other issues, users have the best luck finding workarounds with consistent structure and predictable page elements.</p>
+<p>Some more specific ways to do this are</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements">Use headings in order</a>, without skipping levels.</p></li>
+<li><p>Have descriptive, consistent titles for web pages.</p></li>
+<li><p>Make sure page titles and their name in the navigation match.</p></li>
+<li><p>Provide a table of contents or a summary of what someone can find on that page. Bonus points if they are links that allow you to jump to other headings on the page.</p></li>
+<li><p>Use paragraphs, lists, and other or organization where appropriate. A wall of unbroken text does not work better.</p></li>
+<li><p>Provide a <a class="reference external" href="https://en.wikipedia.org/wiki/Site_map">site map</a>, or a list of all pages on the documentation. This is usually available in or via the website footer.</p></li>
+<li><p>Provide a search built in to the documentation. This is often available in the documentation site theme.</p></li>
+</ul>
+</section>
+<section id="text">
+<h2>Text<a class="headerlink" href="#text" title="Link to this heading">#</a></h2>
+<p>Writing accessible documentation text includes all the usual text writing considerations. Begin by following your project’s style guide and update it to include the following as needed.</p>
+<ul class="simple">
+<li><p>Use proper grammar and punctuation for the language you are writing in. Write in complete sentences. It seems simple, but it makes a difference even from an accessibility perspective.</p></li>
+<li><p>Use <a class="reference external" href="https://guides.18f.gov/content-guide/our-approach/plain-language/">plain language</a>. Plain language is less formal, direct writing that focuses on using words familiar to the audience where field-specific terms are not required.</p></li>
+<li><p>Avoid using <a class="reference external" href="https://en.wikipedia.org/wiki/Jargon">jargon</a>. Many fields will have specific terms and these should be used and defined, but do not use jargon where a more common term will be more clear.</p></li>
+<li><p>Where possible, include or link to a glossary of terms relevant in the documentation.</p></li>
+<li><p>Use the full version of acronyms the first time they are listed so that readers have at least once reference point for the context of acronyms elsewhere in the documentation. Linking acronyms to their definitions may also be helpful.</p></li>
+<li><p>Write <a class="reference external" href="https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context.html">descriptive link text</a>. This means that someone should be able to tell where a link will take them before they click on the link text. For example, “<a class="reference external" href="https://scientific-python.org/">visit Scientific Python</a>” makes it clearer where the link points to than “click here.”</p></li>
+</ul>
+</section>
+<section id="images">
+<h2>Images<a class="headerlink" href="#images" title="Link to this heading">#</a></h2>
+<p>Contrary to text, images can be some of the least flexible types of media for people to interact with. At the same time, for people who can view them, images can be some of the most useful tools in explaining information, providing examples, and offering a quick reference.</p>
+<p>There are two groups of accessibility considerations relevant to making images: considerations within the image and considerations surrounding the image.</p>
+<p>Within the image, or the choices one faces when designing and making the image, authors have to consider the many different ways someone can see. Consider the following:</p>
+<ul class="simple">
+<li><p>All images need to communicate clearly even in black and white. They can be color images, but they need to be readable and understandable if color is stripped away.</p></li>
+<li><p>Be cautious of red and green color combinations in an image, especially if they overlap. <a class="reference external" href="https://en.wikipedia.org/wiki/Color_blindness">Red-green color blindness is the most common type</a> and it often makes the two colors look the same.</p></li>
+<li><p>Be cautious of using colors that all have the same <a class="reference external" href="https://rmit.pressbooks.pub/colourtheory1/chapter/the-properties-of-colour/">value</a>, or amount of light or dark. When color is hard to distinguish or not available, colors of the same value will look the same.</p></li>
+<li><p>Make sure details like text or annotations are large enough in context. There is not a single right answer on what large enough means, but keeping them no smaller than the smallest text on your documentation page when rendered is a good place to start.</p></li>
+<li><p>Follow <a class="reference external" href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html">minimum contrast ratios for colors</a> on an image that overlap. The most important is to make sure that text color has at least 4.5:1 contrast on its background color. Other situations have other <a class="reference external" href="https://webaim.org/resources/contrastchecker/">contrast ratios that can be calculated online</a>.</p></li>
+<li><p>Make sure the image can be expanded, zoomed, or otherwise respond to user size adjustments. This may cross into limitations with the documentation theme, but it is worth reviewing for and making a note if it is not within author control.</p></li>
+<li><p><a class="reference external" href="https://www.w3.org/WAI/WCAG22/Understanding/three-flashes.html">Do not use flashing animations</a> for any animated images. Flashing refers to any fast, high contrast color and/or light changes more than three times per second. These are known to trigger seizures and other pain.</p></li>
+<li><p>Be consistent with your visuals, iconography, and colors where relevant. This preserves continuity and can help users orient themselves within the documentation.</p></li>
+<li><p>Consider if some information-dense images can be broken into multiple images.</p></li>
+</ul>
+<p>Surrounding the image, or the choices one faces once the images appears in context, authors have to consider what happens if the image is not available.</p>
+<ul class="simple">
+<li><p>Any text in the image needs to be available as actual text outside the image. No text should be lost because an image cannot be read.</p></li>
+<li><p>Images need an image description (also called <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/alt">alt text</a> or text alternatives). Generally, this is intended to capture the information the image provides in non-image form. Depending on the type of image and its role in documentation, there may be a few ways to do this. Refer to this <a class="reference external" href="https://www.w3.org/WAI/tutorials/images/decision-tree/">image description decision tree</a>).</p></li>
+<li><p>For images with data involved, link out to the source data or a tutorial notebook when possible.</p></li>
+<li><p>Captions are not image descriptions. Do not use one in place of the other.</p></li>
+</ul>
+<p>In general do not use images to replace text information, use them to augment it.</p>
+</section>
+<section id="videos">
+<h2>Videos<a class="headerlink" href="#videos" title="Link to this heading">#</a></h2>
+<p>Introduce videos and their relevance to the surrounding documentation directly before they appear.</p>
+<p>Videos in documentation should not autoplay. They need a play button and a pause/stop button.</p>
+<p>Videos with sound benefit from volume controls. Since this may be managed by the user outside the website, it is less critical.</p>
+<p>Ideally, all videos with voices have closed captioning (text overlaid on the video player in time with speaking) and a transcript (text in paragraphs not timed to the video) linked. If this information is already in paragraphs surrounding the video, these may not be needed.</p>
+<p>Videos cannot have <a class="reference external" href="https://www.w3.org/WAI/WCAG22/Understanding/three-flashes.html">flashing lights/colors at more than three times per second</a>. This risks triggering seizures. Do not allow this in your documentation.</p>
+<p>Videos are a good addition to documentation that can be very helpful for anyone wanting to see the software in action, but they are best used as additional documentation features. A good way to test that you’ve covered the same information elsewhere in the documentation is to break the link to the video and ensure that no information is missing.</p>
+</section>
+</section>
+<section id="for-things-documentation-authors-don-t-make">
+<h1>For things documentation authors don’t make<a class="headerlink" href="#for-things-documentation-authors-don-t-make" title="Link to this heading">#</a></h1>
+<p>While it is important to recognize what accessibility considerations are directly in the hands of those writing documentation, that doesn’t mean that a documentation author’s power has to end there. Even without taking on other documentation team roles, authors can impact choices and give feedback on the projects they work on.</p>
+<p><strong>Select for accessibility.</strong> Whether making documentation from scratch or writing for existing documentation, choices will always have to be made. Authors can select options to those choices that have accessibility in mind. Examples include</p>
+<ul class="simple">
+<li><p>Choosing a website theme that has accessibility information included or has traits that fit WCAG or other standards.</p></li>
+<li><p>Deciding to not accept new images to the documentation if they don’t have text descriptions.</p></li>
+<li><p>Removing the need for dependencies that don’t have accessibility considerations from within the documentation, such as removing videos until you can link to a video player that does not autoplay.</p></li>
+</ul>
+<p><strong>Advocate for change.</strong> In many cases, accessiblity-related changes cannot be made by one person or require multiple people’s expertise. These situations benefit from advocacy, where an author can use the accessibility awareness they have to encourage others to make changes with them. Examples include</p>
+<ul class="simple">
+<li><p>Noting accessibility issues you find in your own documentation by describing its current behavior compared with the desired behavior.</p></li>
+<li><p>Asking specific questions about accessibility support to members of your team or to dependencies’ teams. Noting the desired accessible behavior is also helpful here.</p></li>
+<li><p>Gathering with other people in your project or across others who want to prioritize accessibility efforts. Figure out what issues you can face together or what you want to advocate for as a team.</p></li>
+</ul>
+<p><strong>Edit what you have.</strong> Sometimes authors do have the option to make a direct change to an aspect of the documentation outside of its contents. When these changes are possible, they are often worth pursuing as long as the whole team is on board, though keeping in mind necessary maintenance must be done. Examples include</p>
+<ul class="simple">
+<li><p>Updating the existing documentation to include descriptive links or make page titles match their navigation names.</p></li>
+<li><p>Add specific accessibility considerations you feel comfortable reviewing for as a required part of the review process in accepting additions to the documentation. This could be declining to merge any documentation without in-order heading levels or that change the color of the theme to be low contrast.</p></li>
+<li><p>Make changes to documentation dependencies like theme and contribute them upstream so the original project and all those using it can benefit.</p></li>
+</ul>
+</section>
+<section id="checklist">
+<h1>Checklist<a class="headerlink" href="#checklist" title="Link to this heading">#</a></h1>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Each page has a descriptive title.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Each page’s title matches how it appears in the navigation.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Pages have a table of contents and/or summary of contents.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Each page has been added to the documentation site map.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Text uses headings in order, without skipping levels.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Text uses paragraph breaks, lists, and other or organization where appropriate.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Text uses proper grammar and punctuation.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Text uses field-specific terms only when needed.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Text includes or links to the full name of acronyms at least the first time they are used.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Link text describes (contextually) where the link will take users if selected.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Images can be understood even when viewed in grayscale.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Images have sufficient color contrast.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Images can be expanded, zoomed, or otherwise respond to user size adjustments.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Details on images (like annotations) appear similar size to body text in context.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Images and details within images are used consistently across the page.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Images and details within images are used consistently across all documentation (where appropriate).</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Animated images and/or videos flash less than three times per second.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Videos are briefly introduced in text preceding the video.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Videos do not autoplay.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Videos have volume control or do not override system volume controls.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Videos have closed captioning available.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Videos have text transcripts available.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Sections of code, iframes, or any other self-contained content are briefly introduced in the text preceding them.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> If all content on the page other than text cannot be loaded, the information that page exists to share can still be accessed.</p></li>
+</ul>
+</section>
+<section id="further-resources">
+<h1>Further resources<a class="headerlink" href="#further-resources" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.w3.org/WAI/">Web Accessibility Initiative</a></p></li>
+<li><p><a class="reference external" href="https://www.writethedocs.org/guide/">Write The Docs software documentation guide</a></p></li>
+<li><p><a class="reference external" href="https://developers.google.com/style/">Google developer documentation style guide</a></p></li>
+<li><p><a class="reference external" href="https://www.w3.org/WAI/tutorials/images/decision-tree/">Web Accessibility Initiative alt decision tree</a> (for images)</p></li>
+<li><p><a class="reference external" href="http://diagramcenter.org/table-of-contents-2.html">DIAGRAM Center image description Guidelines</a></p></li>
+<li><p><a class="reference external" href="https://github.com/isabela-pf/a11y-events/tree/main/workshop-resources/alt-text#alt-textimage-description-workshops">Alt text writing workshops</a></p></li>
+<li><p><a class="reference external" href="https://www.writethedocs.org/videos/portland/2021/writing-documentation-with-neurodivergent-open-source-contributors-in-mind-rin-oliver/">Writing Documentation with Neurodivergent Open Source Contributors In Mind video</a></p></li>
+<li><p><a class="reference external" href="https://www.section508.gov/create/">Section508.gov Content Creation</a></p></li>
+<li><p><a class="reference external" href="https://www.writethedocs.org/blog/newsletter-august-2017/#accessible-docs-colorblindness-edition">Write The Docs accessible docs and colorblindness newsletter archives</a></p></li>
+<li><p><a class="reference external" href="https://www.writethedocs.org/videos/prague/2018/a11y-friendly-documentation-carolyn-stransky/">A11y-Friendly Documentation video</a></p></li>
+<li><p><a class="reference external" href="https://www.writethedocs.org/videos/eu/2015/inclusive-tech-docs-techcomm-meets-accessibility-rmatic/">Inclusive Tech Docs - TechComm Meets Accessibility video</a></p></li>
+<li><p><a class="reference external" href="https://www.writethedocs.org/videos/na/2016/accessible-math-on-the-web-a-server-client-solution-tim-arnold/">Accessible Math on the Web: A Server/Client Solution video</a></p></li>
+<li><p><a class="reference external" href="https://chartability.fizz.studio/">Chartability for data visualization accessibility</a></p></li>
+</ul>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./documentation"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="_index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Documentation Authoring</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../maintainers/_index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Covered in this guide</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sources">Sources</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-accessible-documentation">What is accessible documentation?</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#know-your-strengths">Know your strengths</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#recommendations-by-type">Recommendations by type</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation-structure">Documentation structure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#text">Text</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#images">Images</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#for-things-documentation-authors-don-t-make">For things documentation authors don’t make</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#checklist">Checklist</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#further-resources">Further resources</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

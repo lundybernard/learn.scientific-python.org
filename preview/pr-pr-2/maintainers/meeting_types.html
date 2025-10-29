@@ -1,0 +1,600 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Community Meeting &#8212; My Jupyter Book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'maintainers/meeting_types';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Code of Conduct" href="managing-conflict.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../_index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">My Jupyter Book</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../_index.html">
+                    <no title>
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../about/_index.html">Community</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../community/community-meetings.html">How to initiate a community meeting?</a></li>
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../community/community-outreach.html">Outreaching to Social Media</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../community/project-management.html">Project management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../community/role.html">Who’s a community manager?</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../contributors/_index.html">First steps</a></li>
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="../documentation/_index.html">Documentation Authoring</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../documentation/accessible-documentation.html">Covered in this guide</a></li>
+
+
+
+
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="interacting-with-new-contributors.html">Be welcoming</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="managing-conflict.html">Code of Conduct</a></li>
+
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Community Meeting</a></li>
+
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/maintainers/meeting_types.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Community Meeting</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Community Meeting</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#new-contributors-meeting-office-hours">New Contributors Meeting / Office hours</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#contributor-experience-triage-meeting">Contributor Experience / Triage Meeting</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation-meeting">Documentation Meeting</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#a-note-on-meeting-frequency">A Note on Meeting Frequency</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#website-meeting">Website Meeting</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <p>This is a draft document.
+</p>
+<p>With growth and sustainability in mind, every OSS project would benefit from holding the following recurring meetings:</p>
+<ul class="simple">
+<li><p>community</p></li>
+<li><p>newcomers / open office</p></li>
+<li><p>triage</p></li>
+<li><p>documentation</p></li>
+</ul>
+<p>Further meetings might be added depending on the current needs of the project. That said, one need not start doing everything at once - it might be chaotic.</p>
+<section id="community-meeting">
+<h1>Community Meeting<a class="headerlink" href="#community-meeting" title="Link to this heading">#</a></h1>
+<p><strong>A regular sync meeting for the project’s maintainers which is open to the community.</strong> Everyone is welcome to attend and contribute to conversations.</p>
+<p>👆 this is the version Matplotlib, Pandas use</p>
+<p>Alternative versions:</p>
+<p><strong>A regular meeting to share updates on everything that is happening in the community.</strong> Everyone is welcome to attend and contribute to conversations.</p>
+<p>👆 this is the version NumPy uses, it is broader</p>
+<p><strong>A regular sync meeting for the maintainers, which is open to the community.</strong> The maintainers define the agenda. However, you’re welcome to listen, offer useful input, and if there is time at the end, ask questions.</p>
+<p>👆 this is the version scikit-learn uses, it is more narrow</p>
+</section>
+<section id="new-contributors-meeting-office-hours">
+<h1>New Contributors Meeting / Office hours<a class="headerlink" href="#new-contributors-meeting-office-hours" title="Link to this heading">#</a></h1>
+<p><strong>A regular meeting to make newcomers feel welcome and get over imposter syndrome.</strong></p>
+<ul class="simple">
+<li><p>2-3 maintainers, and when possible a Contributor Experience Lead, welcome new contributors to the project.</p></li>
+<li><p>The maintainers can rotate who joins so it’s not a lot of extra work on the regular when the meetings are monthly.</p></li>
+<li><p>That said, some projects enjoy this format so much and/or it is a part of their strategy to onboard new maintainers to the project they choose to hols them fortnightly, e.g. NumPy.</p></li>
+<li><p>Everyone introduces themselves, so people get to know the person behind the Github handle.</p></li>
+<li><p>We answer questions new contributors might have, about their issues or getting started, or take note about who we might direct them to (tag in gitter, or on their issue/PR/email).</p></li>
+<li><p>We make sure they know about our communication channels and feel comfortable staying in touch and following up with us, e.g. join our mailing lists, gitter, incubator.</p></li>
+<li><p>We clarify what we do, and what we don’t do, e.g. in case someone joins and ask us to assign an issue to them 😉</p></li>
+<li><p>We share ways we communicate async and norms or expectations around those.</p></li>
+<li><p>Advanced level: consider having maintainers demonstrate how to do something in the meeting, e.g. set up the environment, do a PR for a test, a docstring, etc., record these sessions and post them on youtube as instructional videos you can share later on with new contributors who join and prefer video introductions.</p>
+<ul>
+<li><p>Be sure to offer people to mute and turn off their video when recording a session you will post online or with others share later.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="contributor-experience-triage-meeting">
+<h1>Contributor Experience / Triage Meeting<a class="headerlink" href="#contributor-experience-triage-meeting" title="Link to this heading">#</a></h1>
+<p><strong>This meeting aims to prioritize PRs and issues and make decisions on them.</strong> Communicate and coordinate priorities, suggestions, clarifications, and decisions with contributors and maintainers.</p>
+<ul class="simple">
+<li><p>Maintain labels: add descriptions, if relevant - create automation</p></li>
+<li><p>Create regularized responses which the team can share and reuse.</p>
+<ul>
+<li><p>This can help reduce bias and assist all maintainers in avoiding errors in repetitive communication work.</p></li>
+<li><p>We recommend maintainers and CE / T members save these into the <a class="reference external" href="https://docs.github.com/en/get-started/writing-on-github/working-with-saved-replies/using-saved-replies">github saved replies</a></p>
+<ul>
+<li><p>Consider upvoting <a class="reference external" href="https://github.com/github/feedback/discussions/4974">this github issue</a> to make save replies shared among project members</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Take time, or assign someone(s), to mention if a PR or issue will be discussed in an upcoming meeting when .appropriate, so contributors are aware they can participate in discussion regarding their PRs or issues they opened</p></li>
+<li><p>If the scope of the PR is beyond the knowledge or responsibilities of the CE/T group, they escalate the PR to the Community call agenda.</p>
+<ul>
+<li><p>If this happens on too many PRs and/too often such that the impact on the community call is noticeable consider the following:</p>
+<ul>
+<li><p>More experienced maintainers should consider joining the CE/T temporary to help manage the workload</p></li>
+<li><p>A more experienced maintainer can mentor CE/T member(s) to learn more about the project, so they are empowered to handle more decisions and areas of expertise with time.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Scikit-learn did <a class="reference external" href="https://github.com/scikit-learn/administrative/blob/master/triage_meetings/2021-12-10.md">a nice write up</a> of how they defined their triage process here.</p></li>
+</ul>
+</section>
+<section id="documentation-meeting">
+<h1>Documentation Meeting<a class="headerlink" href="#documentation-meeting" title="Link to this heading">#</a></h1>
+<p><strong>This meeting reviews progress with documentation PRs and issues, and discussions about documentation projects, e.g. GSOD.</strong> It also welcomes new contributors who want to begin with documentation issues.</p>
+<ul class="simple">
+<li><p>Writing technical documentation requires knowledge of technology as well as the ability to explain well the complex to a variety of audiences. It is useful to hold recurring project documentation meetings to create an opportunity for contributors to exchange ideas for future projects or track progress and make decisions on existing ones.</p></li>
+<li><p>English second language speakers might have a barrier to entry when the documentation is only available in English. Providing a welcoming space and communicating that we appreciate contributions regardless of English perfection is important.</p></li>
+<li><p>Triage for all DOC issues and PRs</p></li>
+<li><p>A dedicated documentation meeting can attract contributors with a unique set of skills that would not find their place in many other project meetings, e.g. front end developers, illustrators, and technical writers.</p></li>
+<li><p>It can also be attractive for contributors who are interested in a maintainer pathway which is centred on sphinx development, doc testing, technical writing. Keeping the documentation build in check and the docs up to date as well as creating new formats that support new contributors and users in ways the projects didn’t have bandwidth to do before attracting such maintainers</p></li>
+</ul>
+</section>
+<section id="a-note-on-meeting-frequency">
+<h1>A Note on Meeting Frequency<a class="headerlink" href="#a-note-on-meeting-frequency" title="Link to this heading">#</a></h1>
+<p>When the contributor experience / triage and the documentation meetings are in place, the community meetings can be less frequent, e.g. fortnightly, or even monthly. The core maintainers might choose to attend all meetings, while specialised maintainers or contributors would only go to meetings that are relevant to them. This would reduce the meeting frequency for some/most people.</p>
+<p>This is also the case when a contributor or maintainer wants to spin off a team/project meeting, such as a website redesign project. For a certain period you might have a website meeting. Once the new website is launched, that meeting would no longer be necessary.</p>
+</section>
+<section id="website-meeting">
+<h1>Website Meeting<a class="headerlink" href="#website-meeting" title="Link to this heading">#</a></h1>
+<p><strong>This meeting is for discussion on website development, design, and maintenance.</strong> It also welcomes newcomers who want to begin with website issues.</p>
+<ul class="simple">
+<li><p>Website development is technical but also requires UX and graphical design as well as technical writing. This work benefits from in sync communication, while a major development effort is ongoing. Otherwise, the work can be a part of the regular community and triage meetings.</p></li>
+<li><p>English second language speakers might have a barrier to entry with writing in English. Providing a welcoming space and communicating that we appreciate contributions regardless of English perfection is important.</p></li>
+<li><p>Triage for all WEB issues and PRs</p></li>
+<li><p>A dedicated website meeting can attract contributors with a unique set of skills that would not find their place in (m)any other project meeting, e.g. front end developers, graphical designers, UX/HCI designers, illustrators, technical writers.</p></li>
+</ul>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./maintainers"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="managing-conflict.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Code of Conduct</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Community Meeting</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#new-contributors-meeting-office-hours">New Contributors Meeting / Office hours</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#contributor-experience-triage-meeting">Contributor Experience / Triage Meeting</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation-meeting">Documentation Meeting</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#a-note-on-meeting-frequency">A Note on Meeting Frequency</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#website-meeting">Website Meeting</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

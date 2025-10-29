@@ -1,0 +1,642 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>How to make your first contribution to open source? &#8212; My Jupyter Book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'contributors/first-contribution';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Choosing a project to work on" href="getting-started.html" />
+    <link rel="prev" title="Contributing to a Scientific Python project" href="choosing-a-project.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../_index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">My Jupyter Book</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../_index.html">
+                    <no title>
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../about/_index.html">Community</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../community/community-meetings.html">How to initiate a community meeting?</a></li>
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../community/community-outreach.html">Outreaching to Social Media</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../community/project-management.html">Project management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../community/role.html">Who’s a community manager?</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="_index.html">First steps</a></li>
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="../documentation/_index.html">Documentation Authoring</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../documentation/accessible-documentation.html">Covered in this guide</a></li>
+
+
+
+
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../maintainers/interacting-with-new-contributors.html">Be welcoming</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../maintainers/managing-conflict.html">Code of Conduct</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../maintainers/meeting_types.html">Community Meeting</a></li>
+
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/contributors/first-contribution.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>How to make your first contribution to open source?</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-fork-the-projects-repo">Step 1: Fork the project’s repo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-clone-your-fork">Step 2: Clone your fork</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-set-up-your-development-environment">Step 3: Set up your development environment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-pick-an-issue">Step 4: Pick an issue</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-create-a-new-branch-for-your-changes">Step 5: Create a new branch for your changes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-find-the-file-and-make-the-changes">Step 6: Find the file and make the changes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-confirm-test-that-the-issue-is-solved-in-dev-mode">Step 7: Confirm/test that the issue is solved in dev mode</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-commit-your-changes">Step 8: Commit your changes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-open-pr">Step 9: Open PR</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <!--
+# 1.4 First contribution
+
+
+## Topic:
+Steps to do your first contribution to open source.
+
+## Outline:
+- Fork the repo
+- Clone your fork
+- Set up development environment
+- Pick an issue
+- Create a new branch
+- Find the file and make the changes
+- Confirm the issue is solved
+- Commit changes
+- Open PR
+
+-->
+<section id="how-to-make-your-first-contribution-to-open-source">
+<h1>How to make your first contribution to open source?<a class="headerlink" href="#how-to-make-your-first-contribution-to-open-source" title="Link to this heading">#</a></h1>
+<!--
+Hello everyone, I’m Juanita. Welcome to the Scientific Python videos! Today I will be helping you make your first code contribution to an open source software project!. Contributing to an open source project can be intimidating but I will show you that it can be quite simple and I’m sure you will get a lot of help along the way.
+-->
+<p>Before you start, make sure you have the following:</p>
+<ul class="simple">
+<li><p>A GitHub account</p></li>
+<li><p>A terminal or command line</p></li>
+<li><p>An editor or IDE</p></li>
+<li><p>Git installed in your computer</p></li>
+<li><p>Conda installed in your computer</p></li>
+</ul>
+<p>There are some links below the video to help you get these elements ready in case you are missing some.</p>
+<p>Now, we can get started.</p>
+<section id="step-1-fork-the-projects-repo">
+<h2>Step 1: Fork the project’s repo<a class="headerlink" href="#step-1-fork-the-projects-repo" title="Link to this heading">#</a></h2>
+<p>Go to the project’s repository and click the “Fork” button at the top left of the page. This will create a copy of the repository in your own account.</p>
+</section>
+<section id="step-2-clone-your-fork">
+<h2>Step 2: Clone your fork<a class="headerlink" href="#step-2-clone-your-fork" title="Link to this heading">#</a></h2>
+<p>On your new fork, click the green “Code” button and copy the link that appears there to get the URL for cloning it.</p>
+<p>Now, open your terminal (or Git Bash, if you’ve installed Git for Windows) and type the command <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code> followed by pasting the URL you just copied. With this, you now have a local copy of your fork.</p>
+<p>Finally, change to the directory of the repo you just cloned and add the the project’s repo as the “upstream” remote repository by typing the following:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>upstream<span class="w"> </span>https://github.com/organization-name/project-name.git
+</pre></div>
+</div>
+</section>
+<section id="step-3-set-up-your-development-environment">
+<h2>Step 3: Set up your development environment<a class="headerlink" href="#step-3-set-up-your-development-environment" title="Link to this heading">#</a></h2>
+<p>Most open source projects have their own contributing guide, which explains the steps needed for setting up your development environment. You’ll usually find them in the root directory of the repo.
+We recommend that you create a new environment for this.</p>
+<p>To create and activate a new Conda environment, type the following commands in your terminal (or Anaconda Prompt on Windows):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span><span class="o">[</span>NAME<span class="o">]</span><span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>
+conda<span class="w"> </span>activate<span class="w">  </span><span class="o">[</span>NAME<span class="o">]</span>
+</pre></div>
+</div>
+<p>After you have created your new Conda environment, you need to install the project’s necessary dependencies <em>(This depends on which project we will be using for this video)</em>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>…
+</pre></div>
+</div>
+</section>
+<section id="step-4-pick-an-issue">
+<h2>Step 4: Pick an issue<a class="headerlink" href="#step-4-pick-an-issue" title="Link to this heading">#</a></h2>
+<p>Now we need to select the issue we want to fix on the issues tab <em>(Add link of Project’s issue tracker to display in video here)</em> issue tracker of the repository and reproduce it in the development version of our project.
+<em>(Not sure this applies, again it depends on the project)</em>.</p>
+</section>
+<section id="step-5-create-a-new-branch-for-your-changes">
+<h2>Step 5: Create a new branch for your changes<a class="headerlink" href="#step-5-create-a-new-branch-for-your-changes" title="Link to this heading">#</a></h2>
+<p>First create a branch for your work.
+Run the following command in your command line:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span><span class="o">[</span>BRANCH<span class="w"> </span>NAME<span class="o">]</span>
+</pre></div>
+</div>
+</section>
+<section id="step-6-find-the-file-and-make-the-changes">
+<h2>Step 6: Find the file and make the changes<a class="headerlink" href="#step-6-find-the-file-and-make-the-changes" title="Link to this heading">#</a></h2>
+<p>Open your editor or IDE in the file that you need to solve the issue and save your changes.</p>
+</section>
+<section id="step-7-confirm-test-that-the-issue-is-solved-in-dev-mode">
+<h2>Step 7: Confirm/test that the issue is solved in dev mode<a class="headerlink" href="#step-7-confirm-test-that-the-issue-is-solved-in-dev-mode" title="Link to this heading">#</a></h2>
+<p>(Not sure this applies)</p>
+</section>
+<section id="step-8-commit-your-changes">
+<h2>Step 8: Commit your changes<a class="headerlink" href="#step-8-commit-your-changes" title="Link to this heading">#</a></h2>
+<p>Now, you are ready to add and commit your changes with a descriptive message.
+Type the following command in your terminal:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>commit<span class="w"> </span>-a<span class="w"> </span>-m<span class="w"> </span>“descriptive<span class="w"> </span>message”
+</pre></div>
+</div>
+<p>Finally, push your new branch with your changes to your fork on GitHub:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span><span class="o">[</span>BRANCH<span class="w"> </span>NAME<span class="o">]</span>
+</pre></div>
+</div>
+<p>Enter your GitHub username and password if requested.</p>
+<p>Entering your username and password every time you run <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> can get tedious!
+Luckily GitHub lets you use an SSH key to authenticate automatically.
+Basically this involves creating two special files: one kept secret on your computer, and one uploaded to GitHub. If you want to set that up, see here:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent</a></p></li>
+<li><p><a class="reference external" href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account">https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account</a></p></li>
+</ul>
+<p>You can also set up an SSH key using the <code class="docutils literal notranslate"><span class="pre">gh</span></code> command-line tool: <a class="reference external" href="https://cli.github.com/manual/">https://cli.github.com/manual/</a> if you prefer.
+Mac and Windows users (but not Linux users!) who prefer to use <code class="docutils literal notranslate"><span class="pre">git</span></code> through a GUI can manage authentication using the <a class="reference external" href="https://desktop.github.com/">GitHub Desktop app</a>.
+</p>
+</section>
+<section id="step-9-open-pr">
+<h2>Step 9: Open PR<a class="headerlink" href="#step-9-open-pr" title="Link to this heading">#</a></h2>
+<p>Now, you can submit your changes to the project’s repo.</p>
+<p>Go to the project’s repository on Github, and you will see the option to open a Pull Request.
+You also have to make sure that you select the correct branch to merge your changes.</p>
+<p>You have now made your first contribution to open source!</p>
+<!--
+
+#### Links For video
+*(Not sure these are the best resources but we should include some so that people get all the requirements ready)*
+
+https://github.com
+https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+https://conda.io/projects/conda/en/latest/user-guide/install/index.html
+-->
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./contributors"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="choosing-a-project.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Contributing to a Scientific Python project</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="getting-started.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Choosing a project to work on</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-fork-the-projects-repo">Step 1: Fork the project’s repo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-clone-your-fork">Step 2: Clone your fork</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-set-up-your-development-environment">Step 3: Set up your development environment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-pick-an-issue">Step 4: Pick an issue</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-create-a-new-branch-for-your-changes">Step 5: Create a new branch for your changes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-find-the-file-and-make-the-changes">Step 6: Find the file and make the changes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-confirm-test-that-the-issue-is-solved-in-dev-mode">Step 7: Confirm/test that the issue is solved in dev mode</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-commit-your-changes">Step 8: Commit your changes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-open-pr">Step 9: Open PR</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

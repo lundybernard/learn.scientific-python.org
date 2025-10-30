@@ -37,7 +37,6 @@ jobs:
          
           ghp-import \
             --no-jekyll \
-            --no-history \
             --push \
             --force \
             --message "Deploy preview for ${{github.event.pull_request.number}}" \

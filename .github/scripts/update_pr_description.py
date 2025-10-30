@@ -20,7 +20,7 @@ if preview_label in current_body:
     new_body = sub(
         f'{preview_label}.*',
         preview_text,
-        preview_text,
+        current_body,
     )
 else:
     new_body = (

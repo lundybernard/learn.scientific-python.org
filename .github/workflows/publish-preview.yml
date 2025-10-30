@@ -10,23 +10,23 @@ jobs:
     steps:
       - name: Checkout PR branch
         uses: actions/checkout@v4
-      
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: "3.13"
-      
+
       - name: Install dependencies
         run: |
           pip install \
           jupyter-book \
           ghp-import \
           PyGithub 
-      
+
       - name: Build the book
         run: |
           jupyter-book build content/
-      
+
       - name: Deploy with ghp-import
         run: |
           git config user.name "github-actions[bot]"
@@ -34,7 +34,7 @@ jobs:
           
           # Fetch gh-pages branch to preserve existing content
           git fetch origin gh-pages:gh-pages
-         
+
           ghp-import \
             --no-jekyll \
             --push \

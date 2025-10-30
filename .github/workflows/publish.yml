@@ -19,7 +19,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.14'
+          python-version: "3.14"
 
       - name: Install dependencies
         run: pip install jupyter-book ghp-import
@@ -34,7 +34,7 @@ jobs:
 
           # Fetch gh-pages branch to avoid conflicts
           git fetch origin gh-pages:gh-pages
-                    
+
           ghp-import \
             --no-jekyll \
             --push \

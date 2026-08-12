@@ -1,0 +1,54 @@
+name: Deploy Preview
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.13"
+
+      - name: Install dependencies
+        run: |
+          pip install \
+          jupyter-book \
+          ghp-import \
+          PyGithub 
+
+      - name: Build the book
+        run: |
+          jupyter-book build content/
+
+      - name: Deploy with ghp-import
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Fetch gh-pages branch to preserve existing content
+          git fetch origin gh-pages:gh-pages
+
+          ghp-import \
+            --no-jekyll \
+            --push \
+            --force \
+            --message "Deploy preview for ${{github.event.pull_request.number}}" \
+            --branch gh-pages \
+            --remote origin \
+            --prefix=preview/pr-${{github.event.pull_request.number}} \
+            content/_build/html
+
+      - name: Add preview link to PR
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          PREVIEW_URL: https://${{ github.repository_owner }}.github.io/learn.scientific-python.org/preview/pr-${{ github.event.pull_request.number }}/
+        run: python .github/scripts/update_pr_description.py
